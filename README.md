@@ -1,5 +1,5 @@
 # XNAGameStudio
-The Education library from XNA Game Studios, valuable for MonoGame Developers for advanced samples.
+The Education library from XNA Game Studio, valuable for MonoGame Developers for advanced samples.
 
 > ## [Getting Started](https://github.com/DDReaper/XNAGameStudio/wiki/gettingstarted)
 >
@@ -11,6 +11,21 @@ The archive is now complete and all but two samples can be found here, next step
 (The two missing are Mojapi and Racing Game as their files are too big for GIT.  I've downloaded and will source a difference host for the sample files)
 
 If you have comments or suggestions for the archive, please let me know on twitter @SimonDarksideJ or on this site.
+
+# A Checklist
+
+The following is some steps that I've found helpful for remembering what to do when porting a project.
+(It would be nice to automate this at some point.)
+
+These are simplified steps that have worked for the projects converted so far, but may not be sufficient for larger, more complex projects.
+
+[ ] Make new project
+[ ] Copy the .htm and license
+[ ] Copy the stuff in the Content folder/project
+[ ] Copy all of the other files.
+[ ] Make Program.cs run the right thing.
+[ ] Clean up `#if`s. I'm focusing on desktop initially, so I don't plan on dragging along other platforms, especially not Windows Phone. So you can remove anything related to Windows Phone (and probably Xbox?)
+[ ] Add content to the mgcb file.
 
 # Complete solutions
 
@@ -59,14 +74,14 @@ Title | Area | Description | Type
 [*Lens Flare*](https://github.com/DDReaper/XNAGameStudio/wiki/Lens-Flare) | Games: 3D Graphics, Games: Graphics | This sample shows you how to implement a lens flare effect by using occlusion queries to detect when the sun is hidden behind the landscape. | Code Sample
 [*Non-Realistic Rendering*](https://github.com/DDReaper/XNAGameStudio/wiki/Non-Realistic-Rendering) | Games: Graphics, Games: Postprocessing, Games: Shaders | This sample shows how to implement stylized, non-photorealistic rendering techniques, such as cartoon shading, edge detection, and a pencil sketch effect. | Code Sample
 [*Normal Mapping*](https://github.com/DDReaper/XNAGameStudio/wiki/Normal-Mapping) | Games: 3D Graphics, Games: Content Pipeline, Games: Shaders | This sample applies a normal mapping effect to a mesh, and uses a custom content processor to demonstrate adding and removing per-vertex data and reading opaque data. | Code Sample
-[*Particles*](https://github.com/DDReaper/XNAGameStudio/wiki/Particles) | Games: 2D Graphics, Games: Graphics | This sample introduces the concept of a particle system, and shows how to draw particle effects by using SpriteBatch. Two particle effects are demonstrated: an explosion and a rising plume of smoke. | Code Sample
+\[DONE\] [*Particles*](https://github.com/DDReaper/XNAGameStudio/wiki/Particles) | Games: 2D Graphics, Games: Graphics | This sample introduces the concept of a particle system, and shows how to draw particle effects by using SpriteBatch. Two particle effects are demonstrated: an explosion and a rising plume of smoke. | Code Sample
 [*Particles 3D*](https://github.com/DDReaper/XNAGameStudio/wiki/Particles-3D) | Games: 3D Graphics, Games: Graphics, Games: Shaders | This sample shows how to implement a 3D particle system using point sprites. The sample builds on the ideas introduced in the Particles sample, showing how those principles can be extended to work in 3D and optimized through the use of shaders. | Code Sample
 [*Path Drawing*](https://github.com/DDReaper/XNAGameStudio/wiki/Path-Drawing) | Games: Artificial Intelligence, Games: Gameplay, Input, Touch & Gestures | This sample demonstrates how to translate touch input into a path that can be drawn on-screen and followed by a game object. | Code Sample
 [*Primitives*](https://github.com/DDReaper/XNAGameStudio/wiki/Primitives) | Games: 2D Graphics, Games: Graphics | This sample implements a PrimitiveBatch class, which can be used to easily draw points, lines, and triangles on the screen. | Code Sample
 [*Primitives3D*](https://github.com/DDReaper/XNAGameStudio/wiki/Primitives3D) | Games: 3D Graphics, Games: Graphics | This sample provides easily reusable code for drawing basic geometric primitives. | Code Sample
 [*Reach Graphics Demo*](https://github.com/DDReaper/XNAGameStudio/wiki/Reach-Graphics-Demo) | Games: 2D Graphics, Games: 3D Graphics | A sample demonstrating the six built-in graphical effects supported in the Reach graphics profile. | Code Sample
 [*Rim Lighting*](https://github.com/DDReaper/XNAGameStudio/wiki/Rim-Lighting) | Games: 3D Graphics | This sample demonstrates how to implement a rim lighting effect by using the standard graphics effects available on Windows Phone 7. | Code Sample
-[*Safe Area*](https://github.com/DDReaper/XNAGameStudio/wiki/Safe-Area) | Games: Graphics | This sample shows how to make an XNA Framework game display correctly on a wide range of different televisions. | Code Sample
+\[DONE\][*Safe Area*](https://github.com/DDReaper/XNAGameStudio/wiki/Safe-Area) | Games: Graphics | This sample shows how to make an XNA Framework game display correctly on a wide range of different televisions. | Code Sample
 [*Shadow Mapping*](https://github.com/DDReaper/XNAGameStudio/wiki/Shadow-Mapping) | Games: 3D Graphics, Games: Content Pipeline, Games: Graphics, Games: Shaders | This sample shows you how to implement basic shadow mapping from a directional light, where the view and projection of the shadow map adapt to the viewing frustum of the viewer's camera. | Code Sample
 [*Shatter*](https://github.com/DDReaper/XNAGameStudio/wiki/Shatter) | Games: 3D Graphics, Games: Content Pipeline, Games: Graphics, Games: Shaders | This sample shows how you can apply an effect on any model in your game to shatter it. | Code Sample
 [*Shape Rendering*](https://github.com/DDReaper/XNAGameStudio/wiki/Shape-Rendering) | Games: 3D Graphics, Games: Collision, Games: Graphics | This sample demonstrates a method for adding debug shape rendering functionality to a game. | Code Sample
@@ -90,7 +105,7 @@ Title | Area | Description | Type
 [*Collision*](https://github.com/DDReaper/XNAGameStudio/wiki/Collision) | Games: 3D Graphics, Games: Collision | This sample demonstrates collision detection for primitives, including triangles and oriented-bounding boxes. | Code Sample
 [*Chase Camera*](https://github.com/DDReaper/XNAGameStudio/wiki/Chase-Camera) | Games: 3D Graphics, Games: Graphics, Games: Math, Input, Touch & Gestures | This sample demonstrates how to create a simple chase camera with spring physics. | Code Sample
 [*Chase & Evade*](https://github.com/DDReaper/XNAGameStudio/wiki/Chase-and-Evade) | Games: Artificial Intelligence | Featuring a cat, a mouse, and a tank, this sample demonstrates how to implement several simple behaviors for AI, including chasing, evading, and wandering. | Code Sample
-[*Flocking*](https://github.com/DDReaper/XNAGameStudio/wiki/Flocking) | Games: Artificial Intelligence | This sample demonstrates how AIs can use simple rules to move together and create complex behaviors. | Code Sample
+\[DONE\] [*Flocking*](https://github.com/DDReaper/XNAGameStudio/wiki/Flocking) | Games: Artificial Intelligence | This sample demonstrates how AIs can use simple rules to move together and create complex behaviors. | Code Sample
 [*Fuzzy Logic*](https://github.com/DDReaper/XNAGameStudio/wiki/Fuzzy-Logic) | Games: Artificial Intelligence | This sample shows how an AI can use fuzzy logic to make decisions. It also demonstrates a method for organizing different AI behaviors, similar to a state machine. | Code Sample
 [*Inverse Kinematics Sample*](https://github.com/DDReaper/XNAGameStudio/wiki/Inverse-Kinematics-Sample) | Games: 3D Graphics, Games: Graphics, Games: Physics | This sample demonstrates how to implement the basic Cyclic Coordinate Descent (CCD) Inverse Kinematics algorithm. | Code Sample
 [*Pathfinding*](https://github.com/DDReaper/XNAGameStudio/wiki/Pathfinding) | Games: Artificial Intelligence | This sample demonstrates how AIs can use algorithms to navigate a map by using three common pathfinding routines. | Code Sample
