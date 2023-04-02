@@ -12,6 +12,7 @@ using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using System.Collections.Generic;
+using System.IO;
 #endregion
 
 namespace RolePlaying
@@ -73,19 +74,20 @@ namespace RolePlaying
             string soundBankFile)
             : base(game)
         {
-            try
-            {
-                audioEngine = new AudioEngine(settingsFile);
-                waveBank = new WaveBank(audioEngine, waveBankFile);
-                soundBank = new SoundBank(audioEngine, soundBankFile);
-            }
-            catch (NoAudioHardwareException)
-            {
+            // XACT is not supported in MonoGame, so we'll do what this code was already doing without hardware.
+            //try
+            //{
+            //    audioEngine = new AudioEngine(settingsFile);
+            //    waveBank = new WaveBank(audioEngine, waveBankFile);
+            //    soundBank = new SoundBank(audioEngine, soundBankFile);
+            //}
+            //catch (NoAudioHardwareException)
+            //{
                 // silently fall back to silence
                 audioEngine = null;
                 waveBank = null;
                 soundBank = null;
-            }
+            //}
         }
 
 

@@ -179,7 +179,7 @@ namespace RolePlaying
                 Viewport viewport = ScreenManager.GraphicsDevice.Viewport;
                 Vector2 viewportSize = new Vector2(viewport.Width, viewport.Height);
 
-                Color color = new Color(255, 255, 255, TransitionAlpha);
+                Color color = new Color(255, 255, 255, (int)TransitionAlpha);
 
                 spriteBatch.Begin();
                 spriteBatch.Draw(loadingBlackTexture, loadingBlackTextureDestination,

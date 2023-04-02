@@ -11,7 +11,7 @@
 #-------------------------------- References --------------------------------#
 
 /reference:..\..\RolePlayingGameProcessors\bin\Debug\net6.0\RolePlayingGameData.dll
-/reference:..\bin\Debug\net6.0\MonoGame.Framework.dll
+/reference:..\..\RolePlayingGameProcessors\bin\Debug\net6.0\RolePlayingGameProcessors.dll
 
 #---------------------------------- Content ---------------------------------#
 
@@ -922,6 +922,11 @@
 /processor:PassThroughProcessor
 /build:Gear/Weapons/WornStaff.xml
 
+#begin MainGameDescription.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:MainGameDescription.xml
+
 #begin Maps/Chests/BronzeGear.xml
 /importer:XmlImporter
 /processor:PassThroughProcessor
@@ -1089,8 +1094,7 @@
 
 #begin Maps/Chests/PersianBlade.xml
 /importer:XmlImporter
-/processor:SoundEffectProcessor
-/processorParam:Quality=Best
+/processor:PassThroughProcessor
 /build:Maps/Chests/PersianBlade.xml
 
 #begin Maps/Chests/PersianSword.xml

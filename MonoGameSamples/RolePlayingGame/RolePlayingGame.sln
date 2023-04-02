@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RolePlayingGameData", "Role
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RolePlayingGameProcessors", "RolePlayingGameProcessors\RolePlayingGameProcessors.csproj", "{D1637AD3-74E9-400C-8535-1D775E99BF62}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StorageReplacement", "StorageReplacement\StorageReplacement.csproj", "{30C44BAD-6F40-4F50-BD7F-AB47CC2353C8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{D1637AD3-74E9-400C-8535-1D775E99BF62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1637AD3-74E9-400C-8535-1D775E99BF62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1637AD3-74E9-400C-8535-1D775E99BF62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30C44BAD-6F40-4F50-BD7F-AB47CC2353C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30C44BAD-6F40-4F50-BD7F-AB47CC2353C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30C44BAD-6F40-4F50-BD7F-AB47CC2353C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30C44BAD-6F40-4F50-BD7F-AB47CC2353C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

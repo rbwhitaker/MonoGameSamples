@@ -13,14 +13,14 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Reflection;
+using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
-using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Storage;
 using RolePlayingGameData;
+using StorageReplacement;
 #endregion
 
 namespace RolePlaying
@@ -2086,7 +2086,7 @@ namespace RolePlaying
         /// If there is a suitable cached storage device, 
         /// the delegate may be called directly by this function.
         /// </remarks>
-        public static void GetStorageDevice(StorageDeviceDelegate retrievalDelegate)
+        public static async void GetStorageDevice(StorageDeviceDelegate retrievalDelegate)
         {
             // check the parameter
             if (retrievalDelegate == null)
@@ -2101,43 +2101,9 @@ namespace RolePlaying
                 return;
             }
 
-            // the storage device must be retrieved
-            if (!Guide.IsVisible)
-            {
-                // Reset the device
-                storageDevice = null;
-                StorageDevice.BeginShowSelector(GetStorageDeviceResult, retrievalDelegate);
-            }
-
-
-        }
-
-
-        /// <summary>
-        /// Asynchronous callback to the guide's BeginShowStorageDeviceSelector call.
-        /// </summary>
-        /// <param name="result">The IAsyncResult object with the device.</param>
-        private static void GetStorageDeviceResult(IAsyncResult result)
-        {
-            // check the parameter
-            if ((result == null) || !result.IsCompleted)
-            {
-                return;
-            }
-
-            // retrieve and store the storage device
-            storageDevice = StorageDevice.EndShowSelector(result);
-
-            // check the new storage device 
-            if ((storageDevice != null) && storageDevice.IsConnected)
-            {
-                // it passes; call the stored delegate
-                StorageDeviceDelegate func = result.AsyncState as StorageDeviceDelegate;
-                if (func != null)
-                {
-                    func(storageDevice);
-                }
-            }
+            // Reset the device
+            storageDevice = null;
+            StorageDevice.ShowSelector();
         }
 
         /// <summary>
@@ -2145,18 +2111,7 @@ namespace RolePlaying
         /// </summary>
         private static StorageContainer OpenContainer(StorageDevice storageDevice)
         {
-            IAsyncResult result =
-                storageDevice.BeginOpenContainer(Session.SaveGameContainerName, null, null);
-
-            // Wait for the WaitHandle to become signaled.
-            result.AsyncWaitHandle.WaitOne();
-
-            StorageContainer container = storageDevice.EndOpenContainer(result);
-
-            // Close the wait handle.
-            result.AsyncWaitHandle.Close();
-
-            return container;
+            return storageDevice.OpenAsync(Session.SaveGameContainerName).Result;
         }
 
 
