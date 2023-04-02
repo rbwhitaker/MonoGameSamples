@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<XnaContent>
+    <Asset Type="MonoGameXmlContent.Weapon">
+        <Name>Broadsword</Name>
+        <Description>A heavy sword meant for cutting rather than thrusting.</Description>
+        <Cost>450</Cost>
+    </Asset>
+</XnaContent>
