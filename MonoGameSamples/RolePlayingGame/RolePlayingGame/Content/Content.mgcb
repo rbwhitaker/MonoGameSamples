@@ -9618,6 +9618,42 @@
 /processorParam:TextureFormat=Color
 /build:Textures/Maps/Combat/CombatBkgdVillage.jpg
 
+#begin Textures/Maps/NonCombat/DungeonTiles.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/Maps/NonCombat/DungeonTiles.png
+
+#begin Textures/Maps/NonCombat/ForestTiles.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/Maps/NonCombat/ForestTiles.png
+
+#begin Textures/Maps/NonCombat/NonCombatBackground.jpg
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Textures/Maps/NonCombat/NonCombatBackground.jpg
+
 #begin Textures/Spells/Effect1.png
 /importer:TextureImporter
 /processor:TextureProcessor

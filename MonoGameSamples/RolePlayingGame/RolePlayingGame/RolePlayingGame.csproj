@@ -24,6 +24,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RolePlayingGameData\RolePlayingGameData.csproj" />
+    <ProjectReference Include="..\RolePlayingGameProcessors\RolePlayingGameProcessors.csproj" />
     <ProjectReference Include="..\StorageReplacement\StorageReplacement.csproj" />
   </ItemGroup>
   <Target Name="RestoreDotnetTools" BeforeTargets="Restore">
