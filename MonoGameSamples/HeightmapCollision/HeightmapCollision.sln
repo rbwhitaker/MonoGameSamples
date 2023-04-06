@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeightmapCollision", "HeightmapCollision\HeightmapCollision.csproj", "{72E0B4CE-F191-407C-A481-833418462F98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeightmapCollisionPipeline", "HeightmapCollisionPipeline\HeightmapCollisionPipeline.csproj", "{9ABA60B3-D8FC-4BE2-BB6A-742DBE62E68A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{72E0B4CE-F191-407C-A481-833418462F98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72E0B4CE-F191-407C-A481-833418462F98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72E0B4CE-F191-407C-A481-833418462F98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72E0B4CE-F191-407C-A481-833418462F98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9ABA60B3-D8FC-4BE2-BB6A-742DBE62E68A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ABA60B3-D8FC-4BE2-BB6A-742DBE62E68A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ABA60B3-D8FC-4BE2-BB6A-742DBE62E68A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ABA60B3-D8FC-4BE2-BB6A-742DBE62E68A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EDC48BB6-5376-418A-9E80-7484E2C43CB7}
+	EndGlobalSection
+EndGlobal
