@@ -1,0 +1,25 @@
+
+#----------------------------- Global Properties ----------------------------#
+
+/outputDir:bin
+/intermediateDir:obj
+/platform:Windows
+/config:
+/profile:Reach
+/compress:False
+
+#-------------------------------- References --------------------------------#
+
+
+#---------------------------------- Content ---------------------------------#
+
+#begin sky.bmp
+/importer:TextureImporter
+/processor:SkyProcessor
+/build:sky.bmp
+
+#begin terrain.bmp
+/importer:TextureImporter
+/processor:TerrainProcessor
+/build:terrain.bmp
+

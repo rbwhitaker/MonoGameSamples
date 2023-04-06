@@ -1,0 +1,26 @@
+
+#----------------------------- Global Properties ----------------------------#
+
+/outputDir:bin/$(Platform)
+/intermediateDir:obj/$(Platform)
+/platform:DesktopGL
+/config:
+/profile:Reach
+/compress:False
+
+#-------------------------------- References --------------------------------#
+
+/reference:..\..\GeneratedGeometryPipeline\bin\Debug\net6.0\GeneratedGeometryPipeline.dll
+
+#---------------------------------- Content ---------------------------------#
+
+#begin sky.bmp
+/importer:TextureImporter
+/processor:SkyProcessor
+/build:sky.bmp
+
+#begin terrain.bmp
+/importer:TextureImporter
+/processor:TerrainProcessor
+/build:terrain.bmp
+
