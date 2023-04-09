@@ -109,6 +109,8 @@ namespace BillboardPipeline
 
             if (mesh != null)
             {
+                MeshHelper.CalculateNormals(mesh, false); // Models may not have normals, but we're going to need them. So let's make them now, if they don't exist.
+
                 // Create three new geometry objects, one for each type
                 // of billboard that we are going to create. Set different
                 // effect parameters to control the size and wind sensitivity
@@ -125,7 +127,7 @@ namespace BillboardPipeline
                     IList<int> indices = geometry.Indices;
                     IList<Vector3> positions = geometry.Vertices.Positions;
                     IList<Vector3> normals = geometry.Vertices.Channels.Get<Vector3>(VertexChannelNames.Normal());
-
+                    
                     // Loop over all the triangles in this piece of geometry.
                     for (int triangle = 0; triangle < indices.Count; triangle += 3)
                     {
@@ -298,22 +300,19 @@ namespace BillboardPipeline
             // of the normal from the ground underneath the billboard, which can be
             // used in our lighting computation to make the vegetation darker or
             // lighter depending on the lighting of the underlying landscape.
-            VertexChannel<Vector3> normals;
-            normals = channels.Get<Vector3>(VertexChannelNames.Normal());
-
+            IList<Vector3> normals = channels.Get<Vector3>(VertexChannelNames.Normal());
             for (int i = 0; i < 4; i++)
             {
-                normals[index + i] = normal;
+                normals.Add(normal);
             }
 
             // Fourth, add texture coordinates.
-            VertexChannel<Vector2> texCoords;
-            texCoords = channels.Get<Vector2>(VertexChannelNames.TextureCoordinate(0));
+            IList<Vector2> texCoords = channels.Get<Vector2>(VertexChannelNames.TextureCoordinate(0));
 
-            texCoords[index + 0] = new Vector2(0, 0);
-            texCoords[index + 1] = new Vector2(1, 0);
-            texCoords[index + 2] = new Vector2(1, 1);
-            texCoords[index + 3] = new Vector2(0, 1);
+            texCoords.Add(new Vector2(0, 0));
+            texCoords.Add(new Vector2(1, 0));
+            texCoords.Add(new Vector2(1, 1));
+            texCoords.Add(new Vector2(0, 1));
 
             // Fifth, add a per-billboard random value, which is the same for
             // all four vertices. This is used in the vertex shader to make
@@ -321,12 +320,11 @@ namespace BillboardPipeline
             // differently by the wind animation.
             float randomValue = (float)random.NextDouble() * 2 - 1;
 
-            VertexChannel<float> randomValues;
-            randomValues = channels.Get<float>(VertexChannelNames.TextureCoordinate(1));
+            ICollection<float> randomValues = channels.Get<float>(VertexChannelNames.TextureCoordinate(1));
 
             for (int i = 0; i < 4; i++)
             {
-                randomValues[index + i] = randomValue;
+                randomValues.Add(randomValue);
             }
 
             // Sixth and finally, add indices defining the pair of

@@ -9,6 +9,7 @@
 
 #region Using Statements
 using System;
+using System.Runtime.InteropServices;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
@@ -52,6 +53,38 @@ namespace Billboard
         protected override void LoadContent()
         {
             landscape = Content.Load<Model>("landscape");
+            landscape.Meshes[1].MeshParts[0].Effect.Parameters["Texture"].SetValue(Content.Load<Texture2D>("grass"));
+            landscape.Meshes[1].MeshParts[0].Effect.Parameters["LightColor"].SetValue(new Vector3(0.8f, 0.8f, 0.8f));
+            landscape.Meshes[1].MeshParts[0].Effect.Parameters["AmbientColor"].SetValue(new Vector3(0.4f, 0.4f, 0.4f));
+            landscape.Meshes[1].MeshParts[0].Effect.Parameters["AlphaTestDirection"].SetValue(1f);
+            landscape.Meshes[1].MeshParts[0].Effect.Parameters["AlphaTestThreshold"].SetValue(0.95f);
+            landscape.Meshes[1].MeshParts[0].Effect.Parameters["WindDirection"].SetValue(Vector3.UnitX);
+            landscape.Meshes[1].MeshParts[0].Effect.Parameters["WindWaveSize"].SetValue(0.1f);
+            landscape.Meshes[1].MeshParts[0].Effect.Parameters["WindRandomness"].SetValue(1f);
+            landscape.Meshes[1].MeshParts[0].Effect.Parameters["WindSpeed"].SetValue(4f);
+
+            landscape.Meshes[1].MeshParts[1].Effect.Parameters["Texture"].SetValue(Content.Load<Texture2D>("tree"));
+            landscape.Meshes[1].MeshParts[1].Effect.Parameters["LightColor"].SetValue(new Vector3(0.8f, 0.8f, 0.8f));
+            landscape.Meshes[1].MeshParts[1].Effect.Parameters["AmbientColor"].SetValue(new Vector3(0.4f, 0.4f, 0.4f));
+            landscape.Meshes[1].MeshParts[1].Effect.Parameters["AlphaTestDirection"].SetValue(1f);
+            landscape.Meshes[1].MeshParts[1].Effect.Parameters["AlphaTestThreshold"].SetValue(0.95f);
+            landscape.Meshes[1].MeshParts[1].Effect.Parameters["WindDirection"].SetValue(Vector3.UnitX);
+            landscape.Meshes[1].MeshParts[1].Effect.Parameters["WindWaveSize"].SetValue(0.1f);
+            landscape.Meshes[1].MeshParts[1].Effect.Parameters["WindRandomness"].SetValue(1f);
+            landscape.Meshes[1].MeshParts[1].Effect.Parameters["WindSpeed"].SetValue(4f);
+
+            landscape.Meshes[1].MeshParts[2].Effect.Parameters["Texture"].SetValue(Content.Load<Texture2D>("cat"));
+            landscape.Meshes[1].MeshParts[2].Effect.Parameters["LightColor"].SetValue(new Vector3(0.8f, 0.8f, 0.8f));
+            landscape.Meshes[1].MeshParts[2].Effect.Parameters["AmbientColor"].SetValue(new Vector3(0.4f, 0.4f, 0.4f));
+            landscape.Meshes[1].MeshParts[2].Effect.Parameters["AlphaTestDirection"].SetValue(1f);
+            landscape.Meshes[1].MeshParts[2].Effect.Parameters["AlphaTestThreshold"].SetValue(0.95f);
+            landscape.Meshes[1].MeshParts[2].Effect.Parameters["WindDirection"].SetValue(Vector3.UnitX);
+            landscape.Meshes[1].MeshParts[2].Effect.Parameters["WindWaveSize"].SetValue(0.1f);
+            landscape.Meshes[1].MeshParts[2].Effect.Parameters["WindRandomness"].SetValue(1f);
+            landscape.Meshes[1].MeshParts[2].Effect.Parameters["WindSpeed"].SetValue(4f);
+
+            //(landscape.Meshes[1].MeshParts[0].Effect as BasicEffect).Texture = Content.Load<Texture2D>("cat");
+            //(landscape.Meshes[1].MeshParts[0].Effect as BasicEffect).Texture = Content.Load<Texture2D>("tree");
         }
 
 
@@ -106,8 +139,11 @@ namespace Billboard
                     {
                         effect.View = view;
                         effect.Projection = projection;
+                        effect.TextureEnabled = false;
+                        effect.DiffuseColor = new Vector3(1, 1, 1);
 
-                        effect.LightingEnabled = true;
+                        effect.EnableDefaultLighting();
+                        effect.PreferPerPixelLighting = true;
 
                         effect.DirectionalLight0.Enabled = true;
                         effect.DirectionalLight0.Direction = lightDirection;
