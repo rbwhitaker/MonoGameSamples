@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpriteEffects", "SpriteEffects\SpriteEffects.csproj", "{83805128-640F-4D92-AB60-B73D934B767A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpriteEffectsPipeline", "SpriteEffectsPipeline\SpriteEffectsPipeline.csproj", "{FBFFE9C5-D5A8-415D-A07F-00779442C548}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{83805128-640F-4D92-AB60-B73D934B767A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83805128-640F-4D92-AB60-B73D934B767A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83805128-640F-4D92-AB60-B73D934B767A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83805128-640F-4D92-AB60-B73D934B767A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBFFE9C5-D5A8-415D-A07F-00779442C548}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBFFE9C5-D5A8-415D-A07F-00779442C548}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBFFE9C5-D5A8-415D-A07F-00779442C548}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBFFE9C5-D5A8-415D-A07F-00779442C548}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D3F1BB89-EF56-4F74-A60F-8C203B421146}
+	EndGlobalSection
+EndGlobal
