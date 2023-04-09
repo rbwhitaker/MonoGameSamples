@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Distortion", "Distortion\Distortion.csproj", "{9AB4CF89-450E-4AF8-B5AF-6F4C3A19071B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistortionPipeline", "DistortionPipeline\DistortionPipeline.csproj", "{488ECAAC-DE70-4897-A6E5-2E9A6CE485C4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9AB4CF89-450E-4AF8-B5AF-6F4C3A19071B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AB4CF89-450E-4AF8-B5AF-6F4C3A19071B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AB4CF89-450E-4AF8-B5AF-6F4C3A19071B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AB4CF89-450E-4AF8-B5AF-6F4C3A19071B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{488ECAAC-DE70-4897-A6E5-2E9A6CE485C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{488ECAAC-DE70-4897-A6E5-2E9A6CE485C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{488ECAAC-DE70-4897-A6E5-2E9A6CE485C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{488ECAAC-DE70-4897-A6E5-2E9A6CE485C4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D9C3EE2D-14C3-48FF-B5DE-0B89C70DD539}
+	EndGlobalSection
+EndGlobal
