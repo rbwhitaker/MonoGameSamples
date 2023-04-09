@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Billboard", "Billboard\Billboard.csproj", "{4E5CB386-C8FE-41FF-9DAB-4F0CA251FEB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BillboardPipeline", "BillboardPipeline\BillboardPipeline.csproj", "{8710CA05-57B8-4B13-AD54-D09D5C8306FD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E5CB386-C8FE-41FF-9DAB-4F0CA251FEB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E5CB386-C8FE-41FF-9DAB-4F0CA251FEB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E5CB386-C8FE-41FF-9DAB-4F0CA251FEB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E5CB386-C8FE-41FF-9DAB-4F0CA251FEB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8710CA05-57B8-4B13-AD54-D09D5C8306FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8710CA05-57B8-4B13-AD54-D09D5C8306FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8710CA05-57B8-4B13-AD54-D09D5C8306FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8710CA05-57B8-4B13-AD54-D09D5C8306FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CC53F8D9-1203-4306-9F42-DEA09CD1B958}
+	EndGlobalSection
+EndGlobal
