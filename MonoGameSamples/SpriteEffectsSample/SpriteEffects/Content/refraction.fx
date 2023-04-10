@@ -5,7 +5,12 @@
 float2 DisplacementScroll;
 
 sampler TextureSampler : register(s0);
-sampler DisplacementSampler : register(s1);
+//sampler DisplacementSampler : register(s1);
+texture2D DisplacementTexture;
+sampler2D DisplacementSampler = sampler_state
+{
+    Texture = <DisplacementTexture>;
+};
 
 
 float4 main(float4 color : COLOR0, float2 texCoord : TEXCOORD0) : COLOR0
@@ -17,7 +22,7 @@ float4 main(float4 color : COLOR0, float2 texCoord : TEXCOORD0) : COLOR0
     texCoord += displacement * 0.2 - 0.15;
     
     // Look up into the main texture.
-    return tex2D(DisplacementSampler, texCoord) * color;
+    return tex2D(TextureSampler, texCoord) * color;
 }
 
 

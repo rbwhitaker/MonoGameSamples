@@ -45,12 +45,21 @@ namespace SpriteShaderPipeline
             // Calculate normalmap vectors.
             ConvertGreyToAlpha(bitmap);
             ConvertAlphaToNormals(bitmap);
+            return input;
 
             // Convert the result into NormalizedByte4 format.
-            input.ConvertBitmapType(typeof(PixelBitmapContent<NormalizedByte4>));
-
-            return input;
+            //input.ConvertBitmapType(typeof(PixelBitmapContent<NormalizedByte4>));
+            //return input;
+            /*Texture2DContent content = new Texture2DContent();
+            PixelBitmapContent<NormalizedByte4> result = new (bitmap.Width, bitmap.Height);
+            for (int row = 0; row < bitmap.Height; row++)
+                for (int column = 0; column < bitmap.Width; column++)
+                    result.SetPixel(column, row, Convert(bitmap.GetPixel(column, row)));
+            content.Mipmaps.Add(result);
+            return content;*/
         }
+
+        private NormalizedByte4 Convert(Vector4 input) => new NormalizedByte4(input * 2 - Vector4.One);
 
 
         /// <summary>

@@ -5,7 +5,12 @@ float3 LightColor = 1.5;
 float3 AmbientColor = 0;
 
 sampler TextureSampler : register(s0);
-sampler NormalSampler : register(s1);
+//sampler NormalSampler : register(s1);
+texture2D NormalTexture;
+sampler2D NormalSampler = sampler_state
+{
+    Texture = <NormalTexture>;
+};
 
 
 float4 main(float4 color : COLOR0, float2 texCoord : TEXCOORD0) : COLOR0

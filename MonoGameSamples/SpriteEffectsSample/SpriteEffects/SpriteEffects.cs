@@ -243,8 +243,9 @@ namespace SpriteEffects
             refractionEffect.Parameters["DisplacementScroll"].SetValue(
                                                         MoveInCircle(gameTime, 0.1f));
 
+            refractionEffect.Parameters["DisplacementTexture"].SetValue(waterfallTexture);
             // Set the displacement texture.
-            graphics.GraphicsDevice.Textures[1] = waterfallTexture;
+            //graphics.GraphicsDevice.Textures[1] = waterfallTexture;
 
             // Begin the sprite batch.
             spriteBatch.Begin(0, null, null, null, null, refractionEffect);
@@ -316,19 +317,20 @@ namespace SpriteEffects
 
             float tiltUpAndDown = 0.5f + (float)Math.Cos(time * 0.75) * 0.1f;
 
-            Vector3 lightDirection = new Vector3(spinningLight * tiltUpAndDown,
-                                                 1 - tiltUpAndDown);
+            Vector3 lightDirection = new Vector3(spinningLight * tiltUpAndDown, 1 - tiltUpAndDown);
 
             lightDirection.Normalize();
 
             normalmapEffect.Parameters["LightDirection"].SetValue(lightDirection);
+            normalmapEffect.Parameters["LightColor"].SetValue(new Vector3(1.5f));
 
             // Set the normalmap texture.
-            graphics.GraphicsDevice.Textures[1] = catNormalmapTexture;
+            //graphics.GraphicsDevice.Textures[1] = catNormalmapTexture;
+            normalmapEffect.Parameters["NormalTexture"].SetValue(catNormalmapTexture);
 
             // Begin the sprite batch.
             spriteBatch.Begin(0, null, null, null, null, normalmapEffect);
-
+            //spriteBatch.Begin();
             // Draw the sprite.
             spriteBatch.Draw(catTexture, CenterOnScreen(catTexture), Color.White);
 
