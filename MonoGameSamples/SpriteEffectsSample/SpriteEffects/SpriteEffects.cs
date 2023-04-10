@@ -44,7 +44,7 @@ namespace SpriteEffects
             Normalmap,
         }
 
-        DemoEffect currentEffect = 0;
+        DemoEffect currentEffect = DemoEffect.Normalmap;
 
 
         // Effects used by this sample.
@@ -209,7 +209,8 @@ namespace SpriteEffects
 
             // Set the overlay texture (as texture 1,
             // because 0 will be the main sprite texture).
-            graphics.GraphicsDevice.Textures[1] = waterfallTexture;
+            //graphics.GraphicsDevice.Textures[1] = waterfallTexture;
+            disappearEffect.Parameters["OverlayTexture"].SetValue(waterfallTexture);
 
             // Begin the sprite batch.
             spriteBatch.Begin(0, null, null, null, null, disappearEffect);

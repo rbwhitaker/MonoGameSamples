@@ -4,7 +4,12 @@
 float2 OverlayScroll;
 
 sampler TextureSampler : register(s0);
-sampler OverlaySampler : register(s1);
+//sampler OverlaySampler : register(s1);
+texture2D OverlayTexture;
+sampler2D OverlaySampler = sampler_state
+{
+    Texture = <OverlayTexture>;
+};
 
 
 float4 main(float4 color : COLOR0, float2 texCoord : TEXCOORD0) : COLOR0
