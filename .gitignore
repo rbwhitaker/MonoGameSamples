@@ -85,3 +85,4 @@ Test/*.csproj
 #Zip files
 *.zip
 **/.config/**
+*.blend1
