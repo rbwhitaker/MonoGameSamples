@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NormalMapping", "NormalMapping\NormalMapping.csproj", "{0C0A79AF-FF13-4B1E-A825-9DCC7B11ADE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NormalMappingPipeline", "NormalMappingPipeline\NormalMappingPipeline.csproj", "{DC885EAF-712D-4DEE-9AF6-D5D1E5D2884E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0C0A79AF-FF13-4B1E-A825-9DCC7B11ADE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C0A79AF-FF13-4B1E-A825-9DCC7B11ADE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C0A79AF-FF13-4B1E-A825-9DCC7B11ADE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C0A79AF-FF13-4B1E-A825-9DCC7B11ADE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC885EAF-712D-4DEE-9AF6-D5D1E5D2884E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC885EAF-712D-4DEE-9AF6-D5D1E5D2884E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC885EAF-712D-4DEE-9AF6-D5D1E5D2884E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC885EAF-712D-4DEE-9AF6-D5D1E5D2884E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {02710B2E-DE95-466F-990E-E464F2D7B418}
+	EndGlobalSection
+EndGlobal
