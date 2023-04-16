@@ -138,9 +138,9 @@ Status | Title | Area | Description | Type
 
 Status | Title | Area | Description | Type
 ---|---|---|---|---
-||[*HTTP Multiplayer: Tic Tac Toe*](https://github.com/DDReaper/XNAGameStudio/wiki/HTTP-Multiplayer-Tic-Tac-Toe) | Networking & Web Services | This sample demonstrates how create an HTTP Multiplayer game for Windows Phone. | Code Sample
-||[*Bing Maps for Games*](https://github.com/DDReaper/XNAGameStudio/wiki/Bing-Maps-for-Games) | This sample demonstrates how to use the Bing Maps API to load map data into an XNA Game Studio game. | Code Sample
-||[*Bing Maps for Games with Pathfinding*](https://github.com/DDReaper/XNAGameStudio/wiki/Bing-Maps-for-Game-with-Pathfinding) | Games: Artificial Intelligence | This sample expands on the Bing Maps sample by using road data to allow a tank to travel to markers while driving on the roads. | Code Sample
+|Requires WCF|[*HTTP Multiplayer: Tic Tac Toe*](https://github.com/DDReaper/XNAGameStudio/wiki/HTTP-Multiplayer-Tic-Tac-Toe) | Networking & Web Services | This sample demonstrates how create an HTTP Multiplayer game for Windows Phone. | Code Sample
+|Requires Bing Maps Key|[*Bing Maps for Games*](https://github.com/DDReaper/XNAGameStudio/wiki/Bing-Maps-for-Games) | This sample demonstrates how to use the Bing Maps API to load map data into an XNA Game Studio game. | Code Sample
+|Requires Bing Maps Key|[*Bing Maps for Games with Pathfinding*](https://github.com/DDReaper/XNAGameStudio/wiki/Bing-Maps-for-Game-with-Pathfinding) | Games: Artificial Intelligence | This sample expands on the Bing Maps sample by using road data to allow a tank to travel to markers while driving on the roads. | Code Sample
 ||[*Invites*](https://github.com/DDReaper/XNAGameStudio/wiki/Invites) | Networking & Web Services | This sample shows how to support invites in a networked XNA Framework game. | Code Sample
 ||[*Network Prediction*](https://github.com/DDReaper/XNAGameStudio/wiki/Network-Prediction) | Networking & Web Services | This sample shows how to use prediction and smoothing algorithms to compensate for network lag, making remotely controlled objects appear to move smoothly even when there is a significant delay in packets being delivered over the network. | Code Sample
 ||[*Network Lobby and Chat Icons*](https://github.com/DDReaper/XNAGameStudio/wiki/Network-Lobby-and-Chat-Icons) | Games: 2D Graphics, Networking & Web Services | This set of images is designed for displaying status within a networking game, including voice-chat and readiness. | Tool
