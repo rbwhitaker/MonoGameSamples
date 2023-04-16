@@ -1,0 +1,1 @@
+Because of a bug in MonoGame, the 3.8.1 content pipeline does not output the corrrect Fresnel factor, and so it fails to load the model. These compiled .xnb files were compiled with a patched version, and can be dropped into the output content directory to be used in its place, until the bug is fixed.

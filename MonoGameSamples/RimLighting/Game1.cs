@@ -74,7 +74,8 @@ namespace RimLighting
             graphics.PreferredBackBufferWidth = 480;
             graphics.PreferredBackBufferHeight = 800;
 
-            graphics.IsFullScreen = true;            
+            IsMouseVisible = true;
+            //graphics.IsFullScreen = true;            
         }                
 
         void slideBarEnvironmentMapAmount_OnValueChanged(object sender)
@@ -161,6 +162,44 @@ namespace RimLighting
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
+            HandleTouchInput();
+            HandleMouseInput();
+
+            base.Update(gameTime);
+        }
+
+        MouseState _previousMouseState;
+        private void HandleMouseInput()
+        {
+            MouseState currentState = Mouse.GetState();
+            List<TouchLocation> touches = new();
+            if (currentState != _previousMouseState)
+            {
+                if (currentState.LeftButton == ButtonState.Pressed && _previousMouseState.LeftButton == ButtonState.Released)
+                    touches.Add(new TouchLocation(0, TouchLocationState.Pressed, new Vector2(currentState.X, currentState.Y)));
+                if (currentState.Position != _previousMouseState.Position)
+                    touches.Add(new TouchLocation(0, TouchLocationState.Moved, new Vector2(currentState.X, currentState.Y)));
+                if (currentState.LeftButton == ButtonState.Released && _previousMouseState.LeftButton == ButtonState.Pressed)
+                    touches.Add(new TouchLocation(0, TouchLocationState.Released, new Vector2(currentState.X, currentState.Y)));
+            }
+
+            foreach(TouchLocation touch in touches)
+                for (int u = 0; u < uiElementList.Count; u++)
+                    uiElementList[u].HandleTouch(touch);
+
+            // Update World or View matrices according to the user's drag on screen
+            if (!slideBarEnvironmentMapAmount.IsDragging && !slideBarFresnelFactor.IsDragging)
+            {
+                modelViewerCamera.IsRotatingWorld = rotatingMode == RotatingMode.RotatingWorld;
+                for (int t = 0; t < touches.Count; ++t)
+                    modelViewerCamera.HandleTouch(touches[t]);
+            }
+
+            _previousMouseState = currentState;
+        }
+
+        private void HandleTouchInput()
+        {
             TouchCollection tc = TouchPanel.GetState();
 
             // Update our UI elements
@@ -175,10 +214,8 @@ namespace RimLighting
             {
                 modelViewerCamera.IsRotatingWorld = rotatingMode == RotatingMode.RotatingWorld;
                 for (int t = 0; t < tc.Count; ++t)
-                    modelViewerCamera.HandleTouch(tc[t]);                                
-            }                        
-
-            base.Update(gameTime);
+                    modelViewerCamera.HandleTouch(tc[t]);
+            }
         }
 
         /// <summary>
